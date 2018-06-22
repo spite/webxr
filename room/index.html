@@ -233,6 +233,7 @@ for (let inputSource of xrInputSources) {
     m.elements = inputPose.pointerMatrix;
     target.applyMatrix4(m);
     const dir = target.clone().sub(origin);
+    dir.normalize();
 
     if (arrowHelper) {
       scene.remove(arrowHelper);
